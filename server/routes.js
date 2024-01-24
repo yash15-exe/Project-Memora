@@ -14,29 +14,35 @@ const router = express.Router()
 router.post("/register", async (req, res) => {
 
     
+
+    
     try {
-        console.log(req.body);
         
         const {email, password} = req.body;
-     
+        const isDupliEmail = await User.findOne({emails:email})
+
+
+        if(isDupliEmail){
+           return  res.status(400).send("User is already registered")
+        }
+        
+
+        if(!isDupliEmail){
 
         const hashedPassword = await bcrypt.hash(password , 10)
-        console.log(hashedPassword);
+
 
         const user = new User({
             emails:email,
             hashedPassword:hashedPassword
         });
-    
-            console.log(user);
-            await user.save()
+            
+        await user.save()
       
-           
-           
         res.status(200).send("User registered successfully")
+    }
        
     } catch (error) {
-        console.log(error);
         res.status(500).send("User not registered due to server problem:"+ error)
     }
 })
@@ -45,7 +51,7 @@ router.post("/login", async (req ,res) =>{
     try {
         const {email, password} = req.body
 
-        const user = await User.findOne({email})
+        const user = await User.findOne({emails:email})
             console.log(user);
         if(!user){
             return res.status(400).send("User dont exist with this email")
@@ -56,7 +62,7 @@ router.post("/login", async (req ,res) =>{
         if(!validPassword){
             return res.status(400).send("Password is Invalid")
         }
-
+        res.status(400).send("User logged in successfully")
         //web token here
 
     } catch (error) {
