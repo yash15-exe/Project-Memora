@@ -1,5 +1,5 @@
 import express from "express"
-import User from "../Server/Models/userModel.js"
+import User from "../server/Models/userModel.js"
 import bcrypt from "bcrypt"
 import cors from "cors"
 import bodyParser from "body-parser"
