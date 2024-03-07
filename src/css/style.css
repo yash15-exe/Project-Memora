@@ -9,6 +9,7 @@ body {
     background-color: #f4f4f4;
     font-family: Arial, sans-serif;
     line-height: 1.6;
+
 }
 
 /* Header styles */
@@ -23,8 +24,8 @@ header {
 
 /* Logo styles */
 #logo {
-    width: 100px;
-    height: auto;
+    max-width: fit-content;
+    max-height: 50px;
 }
 
 /* Navigation styles */
