@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #000b0a;
+}
+.container {
+  position: relative;
+  width: 750px;
+  height: 550px;
+  border: 2px solid #ea5a8e;
+  box-shadow: 0 0 25px #ea5a8e;
+  overflow: hidden;
+}
+.container .form-box {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.form-box h2 {
+  bottom: 30px;
+  font-size: 32px;
+  text-align: center;
+  font-family: "Playfair+Display", serif;
+  color: #fff;
+}
+.form-box .MyImg {
+  margin-top: 30px;
+}
+.form-box .MyImg img {
+  max-width: 90%;
+  animation: zoomIn 1s ease-in-out forwards;
+  border-color: #000b0a;
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  margin-left: 30px;
+}
+.form-box p {
+  bottom: 30px;
+  font-size: 16px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+.form-box .input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin-top: 25px;
+}
+.details {
+  margin-top: -8rem;
+  margin-left: 20rem;
+  width: 50%;
+}
+.input-box2 p {
+  width: 100%;
+  line-height: normal;
+}
+.input-box2 img {
+  position: relative;
+  top: -12px;
+  right: -70px;
+  font-size: 18px;
+  transform: translateY(-50%);
+}
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+  border-bottom: 2px solid #fff;
+  padding-right: 23px;
+  transition: 0.5s;
+}
+.input-box input:focus,
+.input-box input:valid {
+  border-bottom: 2px solid #ea5a8e;
+}
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+  color: #ea5a8e;
+}
+.input-box img {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  font-size: 18px;
+  transform: translateY(-50%);
+}
+.btn {
+  margin: 10px;
+  top: 30px;
+  position: relative;
+  width: 100%;
+  height: 45px;
+  background: transparent;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  border: 2px solid #ea5a8e;
+  overflow: hidden;
+  z-index: 1;
+  color: #fff;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(#000b0a, #ea5a8e, #ea5a8e);
+  top: 0%;
+  left: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+.btn:hover:before {
+  top: -100%;
+}

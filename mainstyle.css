@@ -1,0 +1,177 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  background-color: #000b0a;
+}
+body {
+  background-color: #000b0a;
+}
+.wrapper {
+  width: 95%;
+  margin: 0 0 0 30px;
+}
+
+nav {
+  top: 0;
+  left: 0;
+  background: #000b0a;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+}
+.user-pic {
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: 30px;
+}
+#search-container {
+  margin: 1em 0;
+}
+#search-container input {
+  background-color: transparent;
+  width: 100%;
+  border-bottom: 2px solid #ffffff;
+  margin-left: 0;
+  padding: 1em 3em;
+  color: #fff;
+}
+/* CSS for the button */
+.addbutton {
+  background-color: #007bff; /* Blue background color */
+  color: #ffffff; /* White text color */
+  border: none; /* Remove border */
+  padding: 10px 20px; /* Add padding */
+  text-align: center; /* Center align text */
+  text-decoration: none; /* Remove default text decoration */
+  display: inline-block; /* Display as inline-block */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Add cursor pointer */
+  border-radius: 5px; /* Add border radius for rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Hover effect for the button */
+.addbutton:hover {
+  background-color: #0056b3; /* Darker blue background color on hover */
+}
+
+#search-container input:focus {
+  border-bottom-color: #ea5a8e;
+  color: #fff;
+}
+nav .back-button {
+  width: 40px;
+  height: 40px;
+  font-size: larger;
+  border-radius: 10%;
+  margin-left: 0;
+  cursor: pointer;
+  background-color: transparent;
+  color: pink;
+
+  background-repeat: no-repeat;
+}
+nav .back-button:hover {
+  border: none;
+}
+nav button {
+  padding: 1em 2em;
+  margin-left: 0;
+  background-color: #ea5a8e;
+  color: #ffffff;
+  border-radius: 5px;
+  margin-top: 0.5em;
+}
+nav button:hover {
+  padding: 1em 2em;
+  margin-left: 0;
+  background-color: transparent;
+  color: #ea5a8e;
+  border: solid #ea5a8e 2px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-top: 0.5em;
+}
+.profile {
+  right: 0;
+  top: 0;
+  background-repeat: no-repeat;
+}
+.button-value {
+  border: 2px solid #066255;
+  padding: 1em 2.2em;
+  border-radius: 3em;
+  background-color: transparent;
+  color: #066255;
+  cursor: pointer;
+  transform: 0.3s ease;
+}
+.button-value:hover {
+  border: 2px solid #066255;
+  padding: 1em 2.2em;
+  border-radius: 3em;
+  background-color: #066255;
+  color: #fff;
+  cursor: pointer;
+  overflow: hidden;
+  transform: translateY(-5px);
+}
+.active {
+  background-color: #066255;
+  color: #ffffff;
+}
+#products {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 1.5em;
+  padding: 2em 0;
+}
+.card {
+  background-color: transparent;
+  max-width: 18em;
+  margin-top: 1em;
+  padding: 1em;
+  border: #fff solid thin;
+  border-radius: 5px;
+  box-shadow: 1em 2em 2.5em rgba(1, 2, 68, 0.08);
+}
+.image-container {
+  text-align: center;
+}
+img {
+  max-width: 100%;
+  object-fit: contain;
+  height: 15em;
+}
+.container {
+  padding-top: 1em;
+  color: #ffffff;
+}
+.container h5 {
+  font-weight: 500;
+}
+.hide {
+  display: none;
+}
+@media screen and (max-width: 720px) {
+  img {
+    max-width: 100%;
+    object-fit: contain;
+    height: 10em;
+  }
+  .card {
+    max-width: 10em;
+    margin-top: 1em;
+  }
+  #products {
+    grid-template-columns: auto auto;
+    grid-column-gap: 1em;
+  }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Filter And Search</title>
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="mainstyle.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav>
+        <button
+          class="back-button"
+          onclick="window.location.href = 'index.html';"
+        >Back</button>
+        <div id="search-container">
+          <input
+            type="search"
+            id="search-input"
+            placeholder="Search product name here.."
+          />
+        </div>
+        <button id="search">Search</button>
+        <img src="images/img2.png" class="user-pic" id="user-pic"/
+        onclick="window.location.href='baseprofile.php';">
+      </nav>
+      <div id="buttons">
+        <button class="button-value" onclick="filterProduct('all')">All</button>
+        <button class="button-value" onclick="filterProduct('Cakeshop')">
+          Cakeshop
+        </button>
+        <button class="button-value" onclick="filterProduct('Decorations')">
+          Decorations
+        </button>
+        <button
+          class="button-value"
+          onclick="filterProduct('Party-Essentials')"
+        >
+          Party Essentials
+        </button>
+        <button class="button-value" onclick="filterProduct('Caterers')">
+          Caterers
+        </button>
+      </div>
+      <div id="products"></div>
+    </div>
+    <!-- Script -->
+    <script src="mainscript.js"></script>
+  </body>
+</html>
+<php
